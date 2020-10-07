@@ -36,10 +36,10 @@ class Edit extends \CrazyCat\Framework\App\Component\Module\Controller\Backend\A
 
         $this->registry->register('current_model', $model);
 
-        $pageTitle = $model->getId() ?
+        $articleTitle = $model->getId() ?
             __('Edit Content Block `%1` [ ID: %2 ]', [$model->getData('title'), $model->getId()]) :
             __('Create Content Block');
 
-        $this->setPageTitle($pageTitle)->render();
+        $this->setPageTitle($articleTitle)->render();
     }
 }

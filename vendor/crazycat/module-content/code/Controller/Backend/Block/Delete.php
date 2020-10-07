@@ -23,7 +23,7 @@ class Delete extends \CrazyCat\Framework\App\Component\Module\Controller\Backend
         $success = false;
 
         if (!($id = $this->request->getParam('id'))) {
-            $message = __('Please specifiy an item.');
+            $message = __('Please specify an item.');
         } else {
             /* @var $model \CrazyCat\Base\Model\AbstractLangModel */
             $model = $this->objectManager->create(Model::class)->load($id);

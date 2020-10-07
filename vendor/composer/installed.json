@@ -6,13 +6,13 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/framework.git",
-            "reference": "10538ac1b11a87e0ed9abef2bccb5b244deb1a13"
+            "reference": "6630803623e9a6ac74fc6157d43eb192f516f625"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/framework/crazycat-framework-v1.0.0-3eab12.tar",
-            "reference": "10538ac1b11a87e0ed9abef2bccb5b244deb1a13",
-            "shasum": "b6e33475576f20615eae927606a82d85974fb20d"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/framework/crazycat-framework-v1.0.0-a01a4f.tar",
+            "reference": "6630803623e9a6ac74fc6157d43eb192f516f625",
+            "shasum": "8ea93e1d555abf0e2eb176d1a0222154fe19163f"
         },
         "require": {
             "crazycat/language-en_us": "~1.0",
@@ -20,7 +20,7 @@
             "php": ">7.3.0",
             "symfony/console": "*"
         },
-        "time": "2020-06-21T08:27:20+00:00",
+        "time": "2020-06-28T10:02:08+00:00",
         "type": "crazycat-library",
         "installation-source": "dist",
         "autoload": {
@@ -93,18 +93,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/language-zh_cn.git",
-            "reference": "09e4b5cd6505be42cbe1e59e74ebe56bbcd29006"
+            "reference": "4f91a7e42a8a89efa6c23887f00ee6be15fd3986"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/language-zh_cn/crazycat-language-zh_cn-v1.0.0-8ba3f1.tar",
-            "reference": "09e4b5cd6505be42cbe1e59e74ebe56bbcd29006",
-            "shasum": "781b4b2a8cd92f6115f607013b9fffc77ed6d612"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/language-zh_cn/crazycat-language-zh_cn-v1.0.0-97f313.tar",
+            "reference": "4f91a7e42a8a89efa6c23887f00ee6be15fd3986",
+            "shasum": "e2680f9c648f83be4e44be37a0270851e2d7cf67"
         },
         "require": {
             "crazycat/framework": "~1.0"
         },
-        "time": "2020-06-11T06:13:37+00:00",
+        "time": "2020-06-26T15:45:20+00:00",
         "type": "crazycat-language",
         "installation-source": "dist",
         "autoload": {
@@ -132,19 +132,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-admin.git",
-            "reference": "44e58aa3f4b573f5f9666c90f8baa055219640bf"
+            "reference": "f670cb0ba5ef00838885237e71e015e23e84c632"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-admin/crazycat-module-admin-v1.0.0-2fb022.tar",
-            "reference": "44e58aa3f4b573f5f9666c90f8baa055219640bf",
-            "shasum": "00f74ff4cfe3e775fdca0dc9bf8228421159dfd0"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-admin/crazycat-module-admin-v1.0.0-dd3874.tar",
+            "reference": "f670cb0ba5ef00838885237e71e015e23e84c632",
+            "shasum": "1dba93daa94f1078474d6e09f70fcd63a7502fc6"
         },
         "require": {
             "crazycat/framework": "~1.0",
             "crazycat/module-base": "~1.0"
         },
-        "time": "2020-06-09T05:01:18+00:00",
+        "time": "2020-10-07T11:22:24+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -178,19 +178,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-banner.git",
-            "reference": "4aaea26b2068964786611f236b9642ffc7e61def"
+            "reference": "ef5c3230aeb0567ade3002f6781cc5f66ab6ca80"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-banner/crazycat-module-banner-v1.0.0-a9c476.tar",
-            "reference": "4aaea26b2068964786611f236b9642ffc7e61def",
-            "shasum": "16cc762afc61ab33922585c29c375d91fb391781"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-banner/crazycat-module-banner-v1.0.0-f2e47f.tar",
+            "reference": "ef5c3230aeb0567ade3002f6781cc5f66ab6ca80",
+            "shasum": "5e2cf610b391ade2df5d252f09ee77a0321e92b3"
         },
         "require": {
             "crazycat/framework": "~1.0",
             "crazycat/module-base": "~1.0"
         },
-        "time": "2020-06-21T08:38:00+00:00",
+        "time": "2020-10-07T11:22:41+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -224,18 +224,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-base.git",
-            "reference": "5c1c82aa84765a07b9e9752d7257b78279d76b0e"
+            "reference": "304520db71a7c97acb1fc428acc35fe94dbfb57e"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-base/crazycat-module-base-v1.0.0-732916.tar",
-            "reference": "5c1c82aa84765a07b9e9752d7257b78279d76b0e",
-            "shasum": "19227f32ce96a05f5bdc73649c880a4b3a67be9d"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-base/crazycat-module-base-v1.0.0-9332cc.tar",
+            "reference": "304520db71a7c97acb1fc428acc35fe94dbfb57e",
+            "shasum": "f9d65943dd97de4dc6b6dccb1651a3c39ff570b4"
         },
         "require": {
             "crazycat/framework": "~1.0"
         },
-        "time": "2020-06-21T09:17:20+00:00",
+        "time": "2020-10-07T11:25:26+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -269,19 +269,25 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-content.git",
-            "reference": "a9f5acf7e34439229ab1212bb18ca9cb688eeab9"
+            "reference": "b13af2edb3d749d6bac283b710529d4cd44ce03b"
         },
         "dist": {
-            "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-content/crazycat-module-content-v1.0.0-c9e255.tar",
-            "reference": "a9f5acf7e34439229ab1212bb18ca9cb688eeab9",
-            "shasum": "ccf2062ca30292f2f81dca63c006e612b23c2c80"
+            "type": "zip",
+            "url": "https://api.github.com/repos/crazy-cats/module-content/zipball/b13af2edb3d749d6bac283b710529d4cd44ce03b",
+            "reference": "b13af2edb3d749d6bac283b710529d4cd44ce03b",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
         },
         "require": {
             "crazycat/framework": "~1.0",
             "crazycat/module-base": "~1.0"
         },
-        "time": "2020-06-12T12:22:39+00:00",
+        "time": "2020-10-07T11:26:07+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -292,6 +298,7 @@
                 "registration.php"
             ]
         },
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "proprietary"
         ],
@@ -299,13 +306,12 @@
             {
                 "name": "Liwei Zeng",
                 "email": "zengliwei@163.com",
-                "homepage": "https://crazy-cat.cn",
                 "role": "Developer"
             }
         ],
         "description": "CrazyCat Module - Content",
         "keywords": [
-            "PSR-12"
+            "psr-12"
         ]
     },
     {
@@ -315,19 +321,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-customer.git",
-            "reference": "897af1135fd107c72a38ed79fcbcf15967336a7e"
+            "reference": "04bb143255775fcdcd4a0ce84a5ff2e78d999a77"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-customer/crazycat-module-customer-v1.0.0-392dde.tar",
-            "reference": "897af1135fd107c72a38ed79fcbcf15967336a7e",
-            "shasum": "9b9aa5f467df9b32943e849116b7c849f43f5ba3"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-customer/crazycat-module-customer-v1.0.0-1bad8d.tar",
+            "reference": "04bb143255775fcdcd4a0ce84a5ff2e78d999a77",
+            "shasum": "7d22b42c8584bfbf25ef1debd9005050a8a5fa88"
         },
         "require": {
             "crazycat/framework": "~1.0",
             "crazycat/module-base": "~1.0"
         },
-        "time": "2020-06-11T04:24:32+00:00",
+        "time": "2020-10-07T11:26:20+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -361,19 +367,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-menu.git",
-            "reference": "ca024f6c9b34cbcc621f5bd85f8f89983ceedb93"
+            "reference": "607adae534301aa6e01f6c9ff753d2f5e5d05a07"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-menu/crazycat-module-menu-v1.0.0-f3b3af.tar",
-            "reference": "ca024f6c9b34cbcc621f5bd85f8f89983ceedb93",
-            "shasum": "5a90604ba3e663eb314d67bee5070440115ae1b8"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-menu/crazycat-module-menu-v1.0.0-d8068f.tar",
+            "reference": "607adae534301aa6e01f6c9ff753d2f5e5d05a07",
+            "shasum": "7f3a262cc7d12c6c66f90764901c807b17f604b5"
         },
         "require": {
             "crazycat/framework": "~1.0",
             "crazycat/module-base": "~1.0"
         },
-        "time": "2020-06-21T15:24:24+00:00",
+        "time": "2020-10-07T11:26:34+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -407,19 +413,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-url-rewrite.git",
-            "reference": "93165edee9d1cbcb7d9e810dc7c22870b74c0105"
+            "reference": "593c3f234d4f0721da41f960c9c2f7efed95bd68"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-url-rewrite/crazycat-module-url-rewrite-v1.0.0-91069c.tar",
-            "reference": "93165edee9d1cbcb7d9e810dc7c22870b74c0105",
-            "shasum": "b2bfa82e144e1a0bcbc231e0d54aa7773fefc3d8"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-url-rewrite/crazycat-module-url-rewrite-v1.0.0-38f9be.tar",
+            "reference": "593c3f234d4f0721da41f960c9c2f7efed95bd68",
+            "shasum": "dcb221986c62a79b20b65c1e39e29c2e2e57850e"
         },
         "require": {
             "crazycat/framework": "~1.0",
             "crazycat/module-base": "~1.0"
         },
-        "time": "2020-06-12T02:26:24+00:00",
+        "time": "2020-10-07T11:26:55+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -453,18 +459,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/theme-backend-default.git",
-            "reference": "99145f6de94ab5ebdc78531052492a916f7161c0"
+            "reference": "d6382a011ccc67f17fd32cf0335ce4296c78fd06"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/theme-backend-default/crazycat-theme-backend-default-v1.0.0-fdaa52.tar",
-            "reference": "99145f6de94ab5ebdc78531052492a916f7161c0",
-            "shasum": "9a53b96f94bf908d67fd327932bd2d76dfc717e6"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/theme-backend-default/crazycat-theme-backend-default-v1.0.0-b3640f.tar",
+            "reference": "d6382a011ccc67f17fd32cf0335ce4296c78fd06",
+            "shasum": "ced1bb63a24d81968353ec0a192f791bdae1ed73"
         },
         "require": {
             "crazycat/framework": "~1.0"
         },
-        "time": "2020-06-12T12:19:38+00:00",
+        "time": "2020-10-07T11:27:17+00:00",
         "type": "crazycat-theme",
         "extra": {
             "branch-alias": {
@@ -497,18 +503,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/theme-frontend-default.git",
-            "reference": "6a88746f6600db38295eda7e44e9b91bc1b02bbd"
+            "reference": "4312192f2f3fca240e250b623c040ae2a41d49ed"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/theme-frontend-default/crazycat-theme-frontend-default-v1.0.0-36b70e.tar",
-            "reference": "6a88746f6600db38295eda7e44e9b91bc1b02bbd",
-            "shasum": "d7b739ea56755ce11b8be2db08edfcb5bc2c1359"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/theme-frontend-default/crazycat-theme-frontend-default-v1.0.0-854ac8.tar",
+            "reference": "4312192f2f3fca240e250b623c040ae2a41d49ed",
+            "shasum": "a6e2f34356008be0c1bc88b21340224397f507c5"
         },
         "require": {
             "crazycat/framework": "~1.0"
         },
-        "time": "2020-06-11T02:55:23+00:00",
+        "time": "2020-10-07T11:27:59+00:00",
         "type": "crazycat-theme",
         "extra": {
             "branch-alias": {
@@ -644,17 +650,17 @@
     },
     {
         "name": "symfony/console",
-        "version": "v5.1.2",
-        "version_normalized": "5.1.2.0",
+        "version": "v5.1.7",
+        "version_normalized": "5.1.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/console.git",
-            "reference": "34ac555a3627e324b660e318daa07572e1140123"
+            "reference": "04c3a31fe8ea94b42c9e2d1acc93d19782133b00"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/console/zipball/34ac555a3627e324b660e318daa07572e1140123",
-            "reference": "34ac555a3627e324b660e318daa07572e1140123",
+            "url": "https://api.github.com/repos/symfony/console/zipball/04c3a31fe8ea94b42c9e2d1acc93d19782133b00",
+            "reference": "04c3a31fe8ea94b42c9e2d1acc93d19782133b00",
             "shasum": "",
             "mirrors": [
                 {
@@ -696,14 +702,14 @@
             "symfony/lock": "",
             "symfony/process": ""
         },
-        "time": "2020-06-15T12:59:21+00:00",
+        "time": "2020-09-18T14:27:32+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "5.1-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "Symfony\\Component\\Console\\": ""
@@ -745,17 +751,17 @@
     },
     {
         "name": "symfony/polyfill-ctype",
-        "version": "v1.17.0",
-        "version_normalized": "1.17.0.0",
+        "version": "v1.18.1",
+        "version_normalized": "1.18.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-ctype.git",
-            "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9"
+            "reference": "1c302646f6efc070cd46856e600e5e0684d6b454"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
-            "reference": "e94c8b1bbe2bc77507a1056cdb06451c75b427f9",
+            "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/1c302646f6efc070cd46856e600e5e0684d6b454",
+            "reference": "1c302646f6efc070cd46856e600e5e0684d6b454",
             "shasum": "",
             "mirrors": [
                 {
@@ -770,11 +776,15 @@
         "suggest": {
             "ext-ctype": "For best performance"
         },
-        "time": "2020-05-12T16:14:59+00:00",
+        "time": "2020-07-14T12:35:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.17-dev"
+                "dev-master": "1.18-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
             }
         },
         "installation-source": "dist",
@@ -825,17 +835,17 @@
     },
     {
         "name": "symfony/polyfill-intl-grapheme",
-        "version": "v1.17.0",
-        "version_normalized": "1.17.0.0",
+        "version": "v1.18.1",
+        "version_normalized": "1.18.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-            "reference": "e094b0770f7833fdf257e6ba4775be4e258230b2"
+            "reference": "b740103edbdcc39602239ee8860f0f45a8eb9aa5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/e094b0770f7833fdf257e6ba4775be4e258230b2",
-            "reference": "e094b0770f7833fdf257e6ba4775be4e258230b2",
+            "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/b740103edbdcc39602239ee8860f0f45a8eb9aa5",
+            "reference": "b740103edbdcc39602239ee8860f0f45a8eb9aa5",
             "shasum": "",
             "mirrors": [
                 {
@@ -850,11 +860,15 @@
         "suggest": {
             "ext-intl": "For best performance"
         },
-        "time": "2020-05-12T16:47:27+00:00",
+        "time": "2020-07-14T12:35:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.17-dev"
+                "dev-master": "1.18-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
             }
         },
         "installation-source": "dist",
@@ -907,17 +921,17 @@
     },
     {
         "name": "symfony/polyfill-intl-normalizer",
-        "version": "v1.17.0",
-        "version_normalized": "1.17.0.0",
+        "version": "v1.18.1",
+        "version_normalized": "1.18.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-            "reference": "1357b1d168eb7f68ad6a134838e46b0b159444a9"
+            "reference": "37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/1357b1d168eb7f68ad6a134838e46b0b159444a9",
-            "reference": "1357b1d168eb7f68ad6a134838e46b0b159444a9",
+            "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e",
+            "reference": "37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e",
             "shasum": "",
             "mirrors": [
                 {
@@ -932,11 +946,15 @@
         "suggest": {
             "ext-intl": "For best performance"
         },
-        "time": "2020-05-12T16:14:59+00:00",
+        "time": "2020-07-14T12:35:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.17-dev"
+                "dev-master": "1.18-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
             }
         },
         "installation-source": "dist",
@@ -992,17 +1010,17 @@
     },
     {
         "name": "symfony/polyfill-mbstring",
-        "version": "v1.17.0",
-        "version_normalized": "1.17.0.0",
+        "version": "v1.18.1",
+        "version_normalized": "1.18.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-mbstring.git",
-            "reference": "fa79b11539418b02fc5e1897267673ba2c19419c"
+            "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fa79b11539418b02fc5e1897267673ba2c19419c",
-            "reference": "fa79b11539418b02fc5e1897267673ba2c19419c",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/a6977d63bf9a0ad4c65cd352709e230876f9904a",
+            "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a",
             "shasum": "",
             "mirrors": [
                 {
@@ -1017,11 +1035,15 @@
         "suggest": {
             "ext-mbstring": "For best performance"
         },
-        "time": "2020-05-12T16:47:27+00:00",
+        "time": "2020-07-14T12:35:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.17-dev"
+                "dev-master": "1.18-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
             }
         },
         "installation-source": "dist",
@@ -1073,17 +1095,17 @@
     },
     {
         "name": "symfony/polyfill-php73",
-        "version": "v1.17.0",
-        "version_normalized": "1.17.0.0",
+        "version": "v1.18.1",
+        "version_normalized": "1.18.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-php73.git",
-            "reference": "a760d8964ff79ab9bf057613a5808284ec852ccc"
+            "reference": "fffa1a52a023e782cdcc221d781fe1ec8f87fcca"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/a760d8964ff79ab9bf057613a5808284ec852ccc",
-            "reference": "a760d8964ff79ab9bf057613a5808284ec852ccc",
+            "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/fffa1a52a023e782cdcc221d781fe1ec8f87fcca",
+            "reference": "fffa1a52a023e782cdcc221d781fe1ec8f87fcca",
             "shasum": "",
             "mirrors": [
                 {
@@ -1095,11 +1117,15 @@
         "require": {
             "php": ">=5.3.3"
         },
-        "time": "2020-05-12T16:47:27+00:00",
+        "time": "2020-07-14T12:35:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.17-dev"
+                "dev-master": "1.18-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
             }
         },
         "installation-source": "dist",
@@ -1153,17 +1179,17 @@
     },
     {
         "name": "symfony/polyfill-php80",
-        "version": "v1.17.0",
-        "version_normalized": "1.17.0.0",
+        "version": "v1.18.1",
+        "version_normalized": "1.18.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-php80.git",
-            "reference": "5e30b2799bc1ad68f7feb62b60a73743589438dd"
+            "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/5e30b2799bc1ad68f7feb62b60a73743589438dd",
-            "reference": "5e30b2799bc1ad68f7feb62b60a73743589438dd",
+            "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/d87d5766cbf48d72388a9f6b85f280c8ad51f981",
+            "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981",
             "shasum": "",
             "mirrors": [
                 {
@@ -1175,11 +1201,15 @@
         "require": {
             "php": ">=7.0.8"
         },
-        "time": "2020-05-12T16:47:27+00:00",
+        "time": "2020-07-14T12:35:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.17-dev"
+                "dev-master": "1.18-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
             }
         },
         "installation-source": "dist",
@@ -1237,17 +1267,17 @@
     },
     {
         "name": "symfony/service-contracts",
-        "version": "v2.1.2",
-        "version_normalized": "2.1.2.0",
+        "version": "v2.2.0",
+        "version_normalized": "2.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/service-contracts.git",
-            "reference": "66a8f0957a3ca54e4f724e49028ab19d75a8918b"
+            "reference": "d15da7ba4957ffb8f1747218be9e1a121fd298a1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/66a8f0957a3ca54e4f724e49028ab19d75a8918b",
-            "reference": "66a8f0957a3ca54e4f724e49028ab19d75a8918b",
+            "url": "https://api.github.com/repos/symfony/service-contracts/zipball/d15da7ba4957ffb8f1747218be9e1a121fd298a1",
+            "reference": "d15da7ba4957ffb8f1747218be9e1a121fd298a1",
             "shasum": "",
             "mirrors": [
                 {
@@ -1263,11 +1293,15 @@
         "suggest": {
             "symfony/service-implementation": ""
         },
-        "time": "2020-05-20T17:43:50+00:00",
+        "time": "2020-09-07T11:33:47+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.1-dev"
+                "dev-master": "2.2-dev"
+            },
+            "thanks": {
+                "name": "symfony/contracts",
+                "url": "https://github.com/symfony/contracts"
             }
         },
         "installation-source": "dist",
@@ -1317,17 +1351,17 @@
     },
     {
         "name": "symfony/string",
-        "version": "v5.1.2",
-        "version_normalized": "5.1.2.0",
+        "version": "v5.1.7",
+        "version_normalized": "5.1.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/string.git",
-            "reference": "ac70459db781108db7c6d8981dd31ce0e29e3298"
+            "reference": "4a9afe9d07bac506f75bcee8ed3ce76da5a9343e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/string/zipball/ac70459db781108db7c6d8981dd31ce0e29e3298",
-            "reference": "ac70459db781108db7c6d8981dd31ce0e29e3298",
+            "url": "https://api.github.com/repos/symfony/string/zipball/4a9afe9d07bac506f75bcee8ed3ce76da5a9343e",
+            "reference": "4a9afe9d07bac506f75bcee8ed3ce76da5a9343e",
             "shasum": "",
             "mirrors": [
                 {
@@ -1350,7 +1384,7 @@
             "symfony/translation-contracts": "^1.1|^2",
             "symfony/var-exporter": "^4.4|^5.0"
         },
-        "time": "2020-06-11T12:16:36+00:00",
+        "time": "2020-09-15T12:23:47+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {

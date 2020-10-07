@@ -18,6 +18,11 @@ abstract class AbstractModel extends \CrazyCat\Framework\App\Data\DataObject
     /**
      * @var array
      */
+    protected $orgData = [];
+
+    /**
+     * @var array
+     */
     protected static $mainFields = [];
 
     /**
@@ -44,6 +49,11 @@ abstract class AbstractModel extends \CrazyCat\Framework\App\Data\DataObject
      * @var string
      */
     protected $idFieldName;
+
+    /**
+     * @var bool
+     */
+    protected $isNew;
 
     /**
      * @var string
@@ -78,7 +88,7 @@ abstract class AbstractModel extends \CrazyCat\Framework\App\Data\DataObject
      */
     protected function init()
     {
-        list($modelName, $mainTable, $idFieldName, $connName) = array_pad(func_get_args(), 4, null);
+        [$modelName, $mainTable, $idFieldName, $connName] = array_pad(func_get_args(), 4, null);
 
         $this->connName = $connName ?: 'default';
         $this->idFieldName = $idFieldName ?: 'id';
@@ -118,6 +128,7 @@ abstract class AbstractModel extends \CrazyCat\Framework\App\Data\DataObject
 
     /**
      * @return void
+     * @throws \ReflectionException
      */
     protected function beforeLoad()
     {
@@ -141,6 +152,9 @@ abstract class AbstractModel extends \CrazyCat\Framework\App\Data\DataObject
      */
     protected function beforeSave()
     {
+        if (!$this->getData($this->idFieldName)) {
+            $this->isNew = true;
+        }
         $this->eventManager->dispatch('model_save_before', ['model' => $this]);
         $this->eventManager->dispatch($this->modelName . '_save_before', ['model' => $this]);
     }
@@ -176,7 +190,7 @@ abstract class AbstractModel extends \CrazyCat\Framework\App\Data\DataObject
     }
 
     /**
-     * @param int|string $id
+     * @param int|string  $id
      * @param string|null $field
      * @return $this
      * @throws \ReflectionException
@@ -188,6 +202,7 @@ abstract class AbstractModel extends \CrazyCat\Framework\App\Data\DataObject
         $table = $this->conn->getTableName($this->mainTable);
         $fieldName = ($field === null) ? $this->idFieldName : $field;
         $this->setData($this->conn->fetchRow(sprintf('SELECT * FROM `%s` WHERE `%s` = ?', $table, $fieldName), [$id]));
+        $this->orgData = $this->data;
 
         $this->afterLoad();
 
