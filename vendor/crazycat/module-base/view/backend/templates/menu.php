@@ -4,7 +4,7 @@
  * See COPYRIGHT.txt for license details.
  */
 
-/* @var $this \CrazyCat\Admin\Block\Menu */
+/* @var $this \CrazyCat\Base\Block\Backend\Menu */
 ?>
 <div class="main-menu" id="main-menu">
     <?= $this->getMenuHtml(); ?>

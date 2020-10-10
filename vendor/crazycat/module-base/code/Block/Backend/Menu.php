@@ -5,19 +5,19 @@
  * See COPYRIGHT.txt for license details.
  */
 
-namespace CrazyCat\Admin\Block;
+namespace CrazyCat\Base\Block\Backend;
 
 /**
  * @category CrazyCat
- * @package  CrazyCat\Admin
+ * @package  CrazyCat\Base
  * @author   Liwei Zeng <zengliwei@163.com>
  * @link     https://crazy-cat.cn
  */
 class Menu extends \CrazyCat\Framework\App\Component\Module\Block\AbstractBlock
 {
-    const CACHE_MENU_DATA = 'backend_menu_data';
+    public const CACHE_KEY = 'backend_menu';
 
-    protected $template = 'CrazyCat\Admin::menu';
+    protected $template = 'CrazyCat\Base::menu';
 
     /**
      * @var \CrazyCat\Framework\App\Component\Module\Manager
@@ -38,7 +38,7 @@ class Menu extends \CrazyCat\Framework\App\Component\Module\Block\AbstractBlock
         \CrazyCat\Framework\App\Component\Language\Translator $translator,
         \CrazyCat\Framework\App\Component\Module\Manager $moduleManager,
         \CrazyCat\Framework\App\Component\Theme\Block\Context $context,
-        \CrazyCat\Admin\Model\Session $session,
+        \CrazyCat\Framework\App\Io\Http\Session\Backend $session,
         array $data = []
     ) {
         parent::__construct($context, $data);
@@ -50,7 +50,7 @@ class Menu extends \CrazyCat\Framework\App\Component\Module\Block\AbstractBlock
 
     /**
      * @param array $menuData
-     * @return array
+     * @return void
      */
     protected function processIdentifier(&$menuData)
     {
@@ -68,23 +68,20 @@ class Menu extends \CrazyCat\Framework\App\Component\Module\Block\AbstractBlock
      */
     protected function getFullMenuData()
     {
-        $cacheMenuData = $this->cacheFactory->create(self::CACHE_MENU_DATA . '-' . $this->translator->getLangCode());
-        if (empty($menuData = $cacheMenuData->getData())) {
-            foreach ($this->moduleManager->getEnabledModules() as $module) {
-                if (is_file(($file = $module->getData('dir') . DS . 'config' . DS . 'backend' . DS . 'menu.php')) &&
-                    is_array(($moduleMenuData = require $file))) {
-                    $menuData = array_merge_recursive($menuData, $moduleMenuData);
-                }
+        $menuData = [];
+        foreach ($this->moduleManager->getEnabledModules() as $module) {
+            if (is_file(($file = $module->getData('dir') . DS . 'config' . DS . 'backend' . DS . 'menu.php')) &&
+                is_array(($moduleMenuData = require $file))) {
+                $menuData = array_merge_recursive($menuData, $moduleMenuData);
             }
-            $this->processIdentifier($menuData);
-            usort(
-                $menuData,
-                function ($a, $b) {
-                    return $a['sort_order'] > $b['sort_order'] ? 1 : ($a['sort_order'] < $b['sort_order'] ? -1 : 0);
-                }
-            );
-            $cacheMenuData->setData($menuData)->save();
         }
+        $this->processIdentifier($menuData);
+        usort(
+            $menuData,
+            function ($a, $b) {
+                return $a['sort_order'] > $b['sort_order'] ? 1 : ($a['sort_order'] < $b['sort_order'] ? -1 : 0);
+            }
+        );
         return $menuData;
     }
 
@@ -138,8 +135,8 @@ class Menu extends \CrazyCat\Framework\App\Component\Module\Block\AbstractBlock
     }
 
     /**
-     * @param array $menuData
-     * @param int   $level
+     * @param array|null $menuData
+     * @param int        $level
      * @return string
      * @throws \ReflectionException
      */

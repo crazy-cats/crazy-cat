@@ -7,6 +7,8 @@
 
 namespace CrazyCat\Framework\App\Component\Theme;
 
+use CrazyCat\Framework\App\ObjectManager;
+
 /**
  * @category CrazyCat
  * @package  CrazyCat\Framework
@@ -15,6 +17,16 @@ namespace CrazyCat\Framework\App\Component\Theme;
  */
 class Block extends \CrazyCat\Framework\App\Data\DataObject
 {
+    public const CACHE_NAME = 'block_html';
+    public const CACHE_TIME = 86400;
+
+    public const CACHE_INFO = 'cache';
+    public const CACHE_INFO_NAME = 'name';
+    public const CACHE_INFO_TIME = 'time';
+
+    public const CACHE_DATA_HTML = 'html';
+    public const CACHE_DATA_TIME = 'time';
+
     /**
      * @var \CrazyCat\Framework\App\Area
      */
@@ -23,7 +35,7 @@ class Block extends \CrazyCat\Framework\App\Data\DataObject
     /**
      * @var \CrazyCat\Framework\App\Cache\Manager
      */
-    protected $cacheFactory;
+    protected $cacheManager;
 
     /**
      * @var \CrazyCat\Framework\App\EventManager
@@ -70,7 +82,7 @@ class Block extends \CrazyCat\Framework\App\Data\DataObject
         parent::__construct($data);
 
         $this->area = $context->getArea();
-        $this->cacheFactory = $context->getCacheFactory();
+        $this->cacheManager = $context->getCacheManager();
         $this->eventManager = $context->getEventManager();
         $this->moduleManager = $context->getModuleManager();
         $this->registry = $context->getRegistry();
@@ -101,7 +113,7 @@ class Block extends \CrazyCat\Framework\App\Data\DataObject
      */
     protected function getAbsTemplatePath($template)
     {
-        list($namespace, $filePath) = explode('::', $template);
+        [$namespace, $filePath] = explode('::', $template);
         if (is_file(
             $file = $this->themeManager->getCurrentTheme()->getData('dir') .
                 DS . 'view/templates/blocks' .
@@ -120,6 +132,54 @@ class Block extends \CrazyCat\Framework\App\Data\DataObject
             }
         }
         throw new \Exception(sprintf('Block template file %s does not exist.', $template));
+    }
+
+    /**
+     * @return string
+     * @throws \Exception
+     */
+    protected function renderHtml()
+    {
+        if (empty($this->template)) {
+            return '';
+        }
+        ob_start();
+        include $this->getAbsTemplatePath($this->template);
+        return ob_get_clean();
+    }
+
+    /**
+     * @return string
+     * @throws \Exception
+     */
+    public function toHtml()
+    {
+        if (($cacheInfo = $this->getData(self::CACHE_INFO))) {
+            $cache = $this->cacheManager->get(self::CACHE_NAME) ?: $this->cacheManager->create(self::CACHE_NAME);
+            $cacheKey = static::CACHE_KEY
+                . '_' . ($cacheInfo[self::CACHE_INFO_NAME] ?? $this->getData('name'))
+                . '-' . $this->translator->getLangCode();
+            $cacheData = $cache->getData($cacheKey);
+            $cacheTime = $cacheInfo[self::CACHE_INFO_TIME] ?? static::CACHE_TIME;
+
+            $now = time();
+            if ($cacheData && ($now - $cacheTime < $cacheData[self::CACHE_DATA_TIME])) {
+                $html = $cacheData[self::CACHE_DATA_HTML];
+            } else {
+                $html = $this->renderHtml();
+                $cache->setData(
+                    $cacheKey,
+                    [
+                        self::CACHE_DATA_TIME => $now,
+                        self::CACHE_DATA_HTML => $html
+                    ]
+                )->save();
+            }
+        } else {
+            $html = $this->renderHtml();
+        }
+
+        return $html;
     }
 
     /**
@@ -144,6 +204,7 @@ class Block extends \CrazyCat\Framework\App\Data\DataObject
     /**
      * @param string $path
      * @return string
+     * @throws \Exception
      */
     public function getUrl($path)
     {
@@ -167,17 +228,19 @@ class Block extends \CrazyCat\Framework\App\Data\DataObject
     }
 
     /**
-     * @return string
-     * @throws \Exception
+     * @return array
      */
-    public function toHtml()
+    public function getChildren()
     {
-        if (empty($this->template)) {
-            return '';
-        }
-
-        ob_start();
-        include $this->getAbsTemplatePath($this->template);
-        return ob_get_clean();
+        $children = $this->getData('children') ?: [];
+        usort(
+            $children,
+            function ($a, $b) {
+                $sortA = $a->hasData('sort') ? $a->getData('sort') : 9999;
+                $sortB = $b->hasData('sort') ? $b->getData('sort') : 9999;
+                return $sortA > $sortB ? 1 : ($sortA < $sortB ? -1 : 0);
+            }
+        );
+        return $children;
     }
 }

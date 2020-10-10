@@ -63,6 +63,11 @@ class Page extends \CrazyCat\Framework\App\Data\DataObject
     private $sectionsHtml;
 
     /**
+     * @var Block[]
+     */
+    private $blocks = [];
+
+    /**
      * @var array
      */
     private $cssInfo = ['files' => [], 'links' => []];
@@ -127,22 +132,26 @@ class Page extends \CrazyCat\Framework\App\Data\DataObject
 
     /**
      * @param array $blocksLayout
-     * @return void
+     * @return array
      * @throws \ReflectionException
      */
     private function prepareBlocks(array $blocksLayout)
     {
-        foreach ($blocksLayout as $sectionName => $blocks) {
-            $this->sectionsHtml[$sectionName] = '';
-            foreach ($blocks as $blockName => $blockInfo) {
-                $data = isset($blockInfo['data']) ? $blockInfo['data'] : [];
-                $data['name'] = $blockName;
-                $this->sectionsHtml[$sectionName] .= $this->objectManager->create(
-                    $blockInfo['class'],
-                    ['data' => $data]
-                )->toHtml();
+        $blocks = [];
+        foreach ($blocksLayout as $blockName => $blockInfo) {
+            if (isset($this->blocks[$blockName])) {
+                throw new \Exception(sprintf('Block name %s exists.', $blockName));
             }
+            $data = isset($blockInfo['data']) ? $blockInfo['data'] : [];
+            $data['name'] = $blockName;
+            $data['children'] = empty($blockInfo['children']) ? [] : $this->prepareBlocks($blockInfo['children']);
+            $this->blocks[$blockName] = $this->objectManager->create(
+                $blockInfo['class'],
+                ['data' => $data]
+            );
+            $blocks[] = $this->blocks[$blockName];
         }
+        return $blocks;
     }
 
     /**
@@ -171,6 +180,15 @@ class Page extends \CrazyCat\Framework\App\Data\DataObject
                 }
             }
         }
+    }
+
+    /**
+     * @param string $blockName
+     * @return Block|null
+     */
+    public function getBlock($blockName)
+    {
+        return $this->blocks[$blockName] ?? null;
     }
 
     /**
@@ -207,15 +225,6 @@ class Page extends \CrazyCat\Framework\App\Data\DataObject
     }
 
     /**
-     * @param string $sectionName
-     * @return string
-     */
-    public function getSectionHtml($sectionName)
-    {
-        return isset($this->sectionsHtml[$sectionName]) ? $this->sectionsHtml[$sectionName] : '';
-    }
-
-    /**
      * @param string $path
      * @return string
      */
@@ -248,6 +257,32 @@ class Page extends \CrazyCat\Framework\App\Data\DataObject
             }
             return $scripts;
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function getBaseUrl()
+    {
+        return $this->url->getBaseUrl();
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrentUrl()
+    {
+        return $this->url->getCurrentUrl();
+    }
+
+    /**
+     * @param string $path
+     * @return string
+     * @throws \Exception
+     */
+    public function getUrl($path)
+    {
+        return $this->url->getUrl($path);
     }
 
     /**

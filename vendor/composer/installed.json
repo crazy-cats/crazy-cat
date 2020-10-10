@@ -6,13 +6,13 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/framework",
-            "reference": "6630803623e9a6ac74fc6157d43eb192f516f625"
+            "reference": "706d7c18dbba3d57b7f45f1947729332a3b97041"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/framework/crazycat-framework-v1.0.0-a01a4f.tar",
-            "reference": "6630803623e9a6ac74fc6157d43eb192f516f625",
-            "shasum": "8ea93e1d555abf0e2eb176d1a0222154fe19163f"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/framework/crazycat-framework-v1.0.0-a35043.tar",
+            "reference": "706d7c18dbba3d57b7f45f1947729332a3b97041",
+            "shasum": "f9b7fc40b739ec826c8c193f5588750002494fef"
         },
         "require": {
             "crazycat/language-en_us": "~1.0",
@@ -20,7 +20,7 @@
             "php": ">7.3.0",
             "symfony/console": "*"
         },
-        "time": "2020-06-28T10:02:08+00:00",
+        "time": "2020-10-10T12:32:32+00:00",
         "type": "crazycat-library",
         "installation-source": "dist",
         "autoload": {
@@ -132,19 +132,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-admin",
-            "reference": "f670cb0ba5ef00838885237e71e015e23e84c632"
+            "reference": "365395a01b29a605e880ced8b929380967d961b5"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-admin/crazycat-module-admin-v1.0.0-dd3874.tar",
-            "reference": "f670cb0ba5ef00838885237e71e015e23e84c632",
-            "shasum": "1dba93daa94f1078474d6e09f70fcd63a7502fc6"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-admin/crazycat-module-admin-v1.0.0-c7362f.tar",
+            "reference": "365395a01b29a605e880ced8b929380967d961b5",
+            "shasum": "a1f793095d67dea9d8969233a75a1015ea379872"
         },
         "require": {
             "crazycat/framework": "~1.0",
             "crazycat/module-base": "~1.0"
         },
-        "time": "2020-10-07T11:22:24+00:00",
+        "time": "2020-10-10T07:06:11+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -224,18 +224,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-base",
-            "reference": "304520db71a7c97acb1fc428acc35fe94dbfb57e"
+            "reference": "19bb336512d144bd0d507141bc94b42e4bb865fa"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-base/crazycat-module-base-v1.0.0-9332cc.tar",
-            "reference": "304520db71a7c97acb1fc428acc35fe94dbfb57e",
-            "shasum": "f9d65943dd97de4dc6b6dccb1651a3c39ff570b4"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-base/crazycat-module-base-v1.0.0-f12d16.tar",
+            "reference": "19bb336512d144bd0d507141bc94b42e4bb865fa",
+            "shasum": "0c6eabb3be08c31a5404f0754b2057e4e7705d95"
         },
         "require": {
             "crazycat/framework": "~1.0"
         },
-        "time": "2020-10-07T11:25:26+00:00",
+        "time": "2020-10-10T06:30:08+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -269,19 +269,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-content",
-            "reference": "e7062ca2956f4b4cc087accf7ed1dcb7ebb41477"
+            "reference": "15e85de04bc17581d9b3c08bade0aa0c89eac4e4"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-content/crazycat-module-content-v1.0.0-6af18a.tar",
-            "reference": "e7062ca2956f4b4cc087accf7ed1dcb7ebb41477",
-            "shasum": "47e912947ab109e2993c716f8f4be8f2600b8d00"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-content/crazycat-module-content-v1.0.0-fb16bf.tar",
+            "reference": "15e85de04bc17581d9b3c08bade0aa0c89eac4e4",
+            "shasum": "45d6b279306b4d203093489325887b4b698c725b"
         },
         "require": {
             "crazycat/framework": "~1.0",
             "crazycat/module-base": "~1.0"
         },
-        "time": "2020-10-09T05:55:38+00:00",
+        "time": "2020-10-09T14:00:09+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -361,19 +361,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/module-menu",
-            "reference": "607adae534301aa6e01f6c9ff753d2f5e5d05a07"
+            "reference": "b762b6767135d03d0dbb906a39dcfddf9d873bcd"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-menu/crazycat-module-menu-v1.0.0-d8068f.tar",
-            "reference": "607adae534301aa6e01f6c9ff753d2f5e5d05a07",
-            "shasum": "7f3a262cc7d12c6c66f90764901c807b17f604b5"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/module-menu/crazycat-module-menu-v1.0.0-a2e466.tar",
+            "reference": "b762b6767135d03d0dbb906a39dcfddf9d873bcd",
+            "shasum": "e89b1953a6cf1b73bea4d9f2ec037ca95806e1d0"
         },
         "require": {
             "crazycat/framework": "~1.0",
             "crazycat/module-base": "~1.0"
         },
-        "time": "2020-10-07T11:26:34+00:00",
+        "time": "2020-10-10T06:29:44+00:00",
         "type": "crazycat-module",
         "installation-source": "dist",
         "autoload": {
@@ -453,18 +453,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/theme-backend-default",
-            "reference": "8ef15cb4c8fea8db59ceec0cff90c1b892940a43"
+            "reference": "c7e07fdf75b690430875ce938242d1b9c6996d05"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/theme-backend-default/crazycat-theme-backend-default-v1.0.0-bae019.tar",
-            "reference": "8ef15cb4c8fea8db59ceec0cff90c1b892940a43",
-            "shasum": "46be7367445446ebfd52c524bbb22082cd433080"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/theme-backend-default/crazycat-theme-backend-default-v1.0.0-bb7193.tar",
+            "reference": "c7e07fdf75b690430875ce938242d1b9c6996d05",
+            "shasum": "fcfc89e240703e2c3ea6e5be6113ff4bf80fb137"
         },
         "require": {
             "crazycat/framework": "~1.0"
         },
-        "time": "2020-10-09T06:09:14+00:00",
+        "time": "2020-10-10T06:29:17+00:00",
         "type": "crazycat-theme",
         "extra": {
             "branch-alias": {
@@ -497,18 +497,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/crazy-cats/theme-frontend-default",
-            "reference": "4312192f2f3fca240e250b623c040ae2a41d49ed"
+            "reference": "82c5330fb1761bc832670d1bcfb9ad4223ab5d4b"
         },
         "dist": {
             "type": "tar",
-            "url": "https://repo.crazy-cat.cn//dist/crazycat/theme-frontend-default/crazycat-theme-frontend-default-v1.0.0-854ac8.tar",
-            "reference": "4312192f2f3fca240e250b623c040ae2a41d49ed",
-            "shasum": "a6e2f34356008be0c1bc88b21340224397f507c5"
+            "url": "https://repo.crazy-cat.cn//dist/crazycat/theme-frontend-default/crazycat-theme-frontend-default-v1.0.0-2d1b80.tar",
+            "reference": "82c5330fb1761bc832670d1bcfb9ad4223ab5d4b",
+            "shasum": "f0d9b56cac4bea7c7b17913ae00a3a073f90fd6e"
         },
         "require": {
             "crazycat/framework": "~1.0"
         },
-        "time": "2020-10-07T11:27:59+00:00",
+        "time": "2020-10-10T06:28:54+00:00",
         "type": "crazycat-theme",
         "extra": {
             "branch-alias": {

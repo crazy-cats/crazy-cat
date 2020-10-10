@@ -23,17 +23,26 @@ return [
                 'js-in-head' => ['class' => 'CrazyCat\Base\Block\Head']
             ]
         ],
+        'header'   => [
+            'class'    => 'CrazyCat\Base\Block\Wrapper',
+            'children' => [
+                'main-menu' => [
+                    'class' => 'CrazyCat\Menu\Block\Menu',
+                    'data'  => [
+                        'cache'      => true,
+                        'identifier' => 'main-menu'
+                    ]
+                ]
+            ]
+        ],
         'messages' => [
             'class' => 'CrazyCat\Base\Block\Message'
         ],
         'main'     => [
-            'class'    => 'CrazyCat\Base\Block\Wrapper'
+            'class' => 'CrazyCat\Base\Block\Wrapper'
         ],
         'footer'   => [
-            'class'    => 'CrazyCat\Base\Block\Wrapper',
-            'children' => [
-                'footer-content' => ['class' => 'CrazyCat\Base\Block\Template']
-            ]
+            'class' => 'CrazyCat\Base\Block\Wrapper'
         ]
     ]
 ];

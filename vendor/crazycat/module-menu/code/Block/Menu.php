@@ -21,6 +21,8 @@ use CrazyCat\Framework\App\Component\Theme\Block\Context;
  */
 class Menu extends \CrazyCat\Framework\App\Component\Module\Block\AbstractBlock
 {
+    public const CACHE_KEY = 'menu';
+
     protected $template = 'CrazyCat\Menu::menu';
 
     /**
@@ -75,6 +77,7 @@ class Menu extends \CrazyCat\Framework\App\Component\Module\Block\AbstractBlock
      * @param int   $parentId
      * @param int   $level
      * @return array
+     * @throws \ReflectionException
      */
     protected function getItemTree($itemSource, $parentId = 0, $level = 0)
     {
@@ -133,7 +136,7 @@ class Menu extends \CrazyCat\Framework\App\Component\Module\Block\AbstractBlock
 
     /**
      * @param \CrazyCat\Menu\Block\Menu\Item $item
-     * @param string                         $template
+     * @param string|null                    $template
      * @return string
      * @throws \ReflectionException
      */
